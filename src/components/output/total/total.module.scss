@@ -1,0 +1,30 @@
+@import '../../../styles/variables';
+
+.total {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	svg {
+		width: $output_svg_size;
+		height: $output_svg_size;
+		fill: $primary;
+	}
+
+	p {
+		font-size: $output_font_size;
+	}
+
+	@media (max-width: 680px) {
+		gap: 5px;
+
+		p {
+			font-size: $output_phone_font_size;
+		}
+		svg {
+			width: $output_phone_svg_size;
+			height: $output_phone_svg_size;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+
+.input {
+	&Content {
+		@media (max-width: 680px) {
+			margin-top: 10px;
+		}
+	}
+
+	&Item {
+		max-width: $max_width;
+		margin-top: 10px;
+		padding: 5px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		select,
+		input {
+			border: 1px solid black;
+		}
+
+		&::before {
+			margin-bottom: 5px;
+			display: block;
+			content: attr(data-desc);
+			font-size: 20px;
+			font-weight: 600;
+		}
+	}
+}
